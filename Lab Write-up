@@ -1,0 +1,83 @@
+Sun Han
+Caleb Kumar
+Michael Owusu
+10/27/14
+Prof. Henry Walker
+CSC207
+
+Pictorial Loop Invariants
+
+Write-up
+
+1.
+Partition arranges code from left to right by comparing to a pivot value.
+The exit condition accordingly is to compare l_spot and r_spot until the
+the two values are next to each other or equal to each other in the array 
+and we have eliminated a middle. In code this looks like:
+
+(l_spot <= r_spot)
+
+This is correct because the variable r_spot gives the location, so that 
+a[r_spot+1], ..., a[right] are all >= a[left], and a[left+1], ..., a[l_spot-1]
+are all <= a[left]. Therefore once l_spot has passed r_spot, all the necessary
+values have been checked so we can exit.
+ 
+ 
+2. See Code
+
+3. See Code
+
+4. See Code
+
+5. See Code
+
+6.
+For both invariants, we will use the following three variables to record the indices of the borders for the colors:
+
+left
+middle
+right
+
+For invariant B:
+left, represents the first element unchecked outside of the red section (between red and white). 
+middle,  represents the first element unchecked outside of the white section (between white and unprocessed)
+right, represents the first element prior to the blue section.
+
+For invariant C:
+left, represents the first element right outside of the red section (between red and unprocessed). 
+middle, represents the first element unchecked outside of the unprocessed section (between unprocessed and white)
+right, represents the first element prior to the blue section.
+
+7.
+See code
+
+8.
+see code
+
+9.Everytime DutchNationalFlag.java is run, it will randomly generate an array of type color, print that unsorted array, sort that array, and print the sorted array. We ran it several times
+each time generating different arrays and made sure those arrays were sorted. 
+
+Sources:
+
+http://www.algolist.net/Algorithms/Sorting/Quicksort
+For help implementing partition
+for help implementing quicksort
+
+http://tekmarathon.com/2013/09/17/understanding-quicksort-algorithm/
+For help implementing partition
+
+http://codereview.stackexchange.com/questions/17523/partitioning-array-elements-into-two-subsets
+for help swapping values in partition
+
+Sources: http://rosettacode.org/wiki/Dutch_national_flag_problem#Java
+for help implementing the dutch National Flag​
+
+Professor Walker for help understanding partition
+
+Mira Hall for help debugging partition and understanding the problem
+
+Alex Mitchell help using partition on already sorted lists
+
+
+
+​
